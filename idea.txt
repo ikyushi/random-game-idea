@@ -1,0 +1,9 @@
+genre: dating sim
+rule: you are the final boss
+- you (or maybe your dark side) killed the guy you were dating
+- fight yourself afterwards
+setting: dungeon crawler
+- school = dungeon
+theme: don't stop moving, descent into madness
+- if you stay in the same spot for too long, you die
+- go insane after killing the guy you were dating

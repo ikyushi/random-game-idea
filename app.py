@@ -55,7 +55,7 @@ class App:
         pygame.display.flip()
         self.clock = pygame.time.Clock()
         self.fps = 60
-        self.font = pygame.font.SysFont("monospace", 20)
+        self.font = pygame.font.Font("fonts/Korean_Calligraphy.ttf", 20)
         self.lives = 1
         self.level = 1
         self.game_over = False
@@ -79,6 +79,7 @@ class App:
     def on_event(self, event, paused):  # event handler
         if event == pygame.QUIT:
             self._running = False
+            os._exit(0)
         else:
             keys = pygame.key.get_pressed()
             if keys[pygame.K_ESCAPE]:
@@ -94,11 +95,9 @@ class App:
                             if event.type == pygame.KEYDOWN:
                                 if event.key == pygame.K_ESCAPE:
                                     paused = False
-                                if event.key == pygame.K_p:
-                                    paused = False
                         self.screen.fill((0, 0, 0))
                         self.screen.blit(pygame.image.load("images/background.png"), (0, 0))
-                        self.screen.blit(pygame.image.load("images/pause.png"), (0, 0))
+                        self.screen.blit(pygame.image.load("images/pause.png"), (100, 75))
                         pygame.display.flip()
     
     def on_loop(self):  # game logic
